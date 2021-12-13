@@ -16,6 +16,15 @@ const routes: Routes = [
     path: "",
     redirectTo: "home", pathMatch: "full",
   },
+  {
+    path: "settings",
+    loadChildren: () =>
+      import("./components/settings/settings.module").then((m) => m.SettingsModule)
+  },
+  {
+    path: "**",
+    redirectTo: "home", pathMatch: "full",
+  },
 ];
 
 @NgModule({

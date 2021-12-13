@@ -6,9 +6,6 @@ import { PreferencesComponent} from './preferences/preferences.component';
 import { ProfileComponent } from './profile/profile.component';
 
 const routes: Routes = [
-    {
-        path: "settings",
-        children: [
             {
                 path: "edit",
                 component: EditComponent,
@@ -22,11 +19,9 @@ const routes: Routes = [
                 component: ProfileComponent,
             },
         ]
-    },
-];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
 export class SettingsRoutingModule { }
