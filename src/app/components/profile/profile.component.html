@@ -1,0 +1,59 @@
+<div style="margin-top: 25px; margin-left: 50px; margin-right: 50px;">
+    <!-- DATA USER -->
+    <mat-card class="content-data-user mb-4 mt-4">
+        <div class="row">
+            <div class="col-lg-4">
+                <mat-card-content class="content-avatar">
+                    <div class="avatar">
+                        <img [src]="userGen.usuarios[id].picture.large" alt="User" class="rounded-circle" width="150" />
+                    </div>
+                    <h2 class="mt-4">
+                        {{userGen.usuarios[id].name.first}} {{userGen.usuarios[id].name.last}}
+                    </h2>
+                    <div>
+                        <h3 class="mt-4">{{userGen.usuarios[id].location.country}}, {{userGen.usuarios[id].location.state}}</h3>
+                        <h3>{{userGen.usuarios[id].location.city}}</h3>
+                    </div>
+                    <div class="content-linkedin mt-3">
+                        <img src="https://cdn.caspio.com/C1F04000/ICONS/linkedin.png" alt="logo linkedin" style="margin-bottom: 10px;" />
+                        <p>{{userGen.usuarios[id].email}}</p>
+                    </div>
+                </mat-card-content>
+            </div>
+            <div class="col-lg-8">
+                <mat-card-content class="info-user">
+                    <mat-card-title-group class="titles-group">
+                        <mat-card-title class="title-group">Datos de usuario</mat-card-title>
+                        <div class="content-button-user">
+                            <button mat-flat-button color="primary">
+                <span _ngcontent-sox-c1="" class="material-icons">edit</span>
+                {{ 'Editar' }}
+              </button>
+                        </div>
+                    </mat-card-title-group>
+
+                    <div class="content-list-group mt-4">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <p class="hr">Nombre</p>
+                                <p class="td">{{userGen.usuarios[id].name.first}}</p>
+                            </li>
+                            <li class="list-group-item">
+                                <p class="hr">Apellido</p>
+                                <p class="td">{{userGen.usuarios[id].name.last}}</p>
+                            </li>
+                            <li class="list-group-item">
+                                <p class="hr">Email</p>
+                                <p class="td">{{userGen.usuarios[id].email}}</p>
+                            </li>
+                            <li class="list-group-item last-item">
+                                <p class="hr">Telefono</p>
+                                <p class="td">{{userGen.usuarios[id].phone}}</p>
+                            </li>
+                        </ul>
+                    </div>
+                </mat-card-content>
+            </div>
+        </div>
+    </mat-card>
+</div>

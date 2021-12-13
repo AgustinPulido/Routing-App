@@ -1,0 +1,13 @@
+<p>
+    <mat-toolbar color="primary">
+        <div class="d-flex justify-content-between" style='width: 100%;'>
+            <span style="margin-right: 20px; font-size: 16px; cursor: pointer" (click)='goHome()'>Angular Routing</span>
+            <button mat-button [matMenuTriggerFor]="menu" style='font-size: 16px;'>Settings</button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item [routerLink]="['/settings/profile']" routerLinkActive="router-link-active">Profile</button>
+                <button mat-menu-item [routerLink]="['/settings/preferences']" routerLinkActive="router-link-active">Preferences</button>
+                <button mat-menu-item [routerLink]="['/settings/edit']" routerLinkActive="router-link-active">Edit</button>
+            </mat-menu>
+        </div>
+    </mat-toolbar>
+</p>

@@ -1,0 +1,41 @@
+<div style="margin-top: 25px; margin-left: 50px; margin-right: 50px;">
+    <table class="table table-hover table-striped">
+        <thead>
+            <tr>
+                <th>Imagen</th>
+                <th>Id</th>
+                <th>Genero</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Numero</th>
+                <th>Profile</th>
+            </tr>
+        </thead>
+        <tbody style="overflow: auto">
+            <tr *ngFor='let user of userGen.usuarios; let i = index'>
+                <td>
+                    <img src='{{user.picture.thumbnail}}'>
+                    <td>
+                        {{i}}
+                    </td>
+                    <td>
+                        {{user.gender}}
+                    </td>
+                    <td>
+                        {{user.name.first}}
+                    </td>
+                    <td>
+                        {{user.name.last}}
+                    </td>
+                    <td>
+                        {{user.phone}}
+                    </td>
+                    <td>
+                        <button mat-flat-button color="primary" (click)='seeProfile(i)'>
+                            {{ 'Ver' }}
+                        </button>
+                    </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
