@@ -16,6 +16,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { RandomUserService } from './services/random-user';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ProfileComponent } from './components/profile/profile.component';
+import { CartComponent } from './components/cart/cart.component';
+import { CartNewComponent } from './components/cart-new/cart-new.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { ProfileComponent } from './components/profile/profile.component';
     HomeComponent,
     HeaderComponent,
     ProfileComponent,
+    CartComponent,
+    CartNewComponent,
   ],
   imports: [
     BrowserModule,
